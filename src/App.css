@@ -1,0 +1,6 @@
+.App {
+  height: 100vh;
+  background: #F6F8FA;
+  display: flex;
+  gap: 16px;
+}
