@@ -1,31 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import dashboard from '../../assets/icons/dashboard.svg';
-import assessment from '../../assets/icons/note_alt.svg';
-import library from '../../assets/icons/quiz.svg';
-import status from '../../assets/icons/admin_meds.svg';
 import dottedLineNav from '../../assets/icons/dottedLineNav.svg';
-
 
 import NavbarItem from '../NavbarItem/NavbarItem';
 
 import './Navbar.css';
 const Navbar = () => {
+  const pathname = window.location.pathname;
+  const [currentPage, setCurrentPage] = useState(pathname === '/' ? '': pathname);
+  
   return (
     <div className='navbar'>
-        <Link  to='/'>
-          <NavbarItem pagename={'Dashboard'} pageicon={dashboard}/>
+        <Link  to='/' onClick={()=> setCurrentPage('')}>
+          <NavbarItem pagename={'Dashboard'} isCurrentPath={currentPage === ''}/>
         </Link>
-        <Link  to='/assessment'>
-        <NavbarItem pagename={'Assessment'} pageicon={assessment}/>
+        <Link  to='/assessment' onClick={()=> setCurrentPage('/assessment')}>
+        <NavbarItem pagename={'Assessment'} isCurrentPath={currentPage === '/assessment'}/>
         </Link>
-        <Link  to='/library'>
-        <NavbarItem pagename={'My Library'} pageicon={library}/>
+        <Link  to='/library' onClick={()=> setCurrentPage('/library')}>
+        <NavbarItem pagename={'My Library'} isCurrentPath={currentPage === '/library'}/>
         </Link>
         <span><img src={dottedLineNav} alt='dottedline'/></span>
-        <Link  to='/roundstatus'>
-        <NavbarItem pagename={'Round Status'} pageicon={status}/>
+        <Link  to='/roundstatus' onClick={()=> setCurrentPage('/roundstatus')}>
+        <NavbarItem pagename={'Round Status'} isCurrentPath={currentPage === '/roundstatus'}/>
         </Link>
     </div>
   )
