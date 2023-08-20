@@ -11,34 +11,38 @@ import { ReactComponent as Purpose } from "../../assets/icons/purpose.svg";
 import { ReactComponent as Candidate } from "../../assets/icons/candidates.svg";
 import { ReactComponent as MiddleStroke } from "../../assets/icons/middle.svg";
 import { ReactComponent as World } from "../../assets/icons/world.svg";
+import { ReactComponent as MobileVersion } from "../../assets/icons/mobile_screen_share.svg";
 
 import TotalComponent from "../../components/TotalComponent/TotalComponent";
 import CandidateStatistics from "../../components/CandidateStatistics/CandidateStatistics";
 import NewAssessment from "../../components/NewAssessment/NewAssessment";
 import AssessmentCard from "../../components/AssessmentCard/AssessmentCard";
-const AssessmentBar = ["My Assessments", "Results"];
+const AssessmentBar = ["My Assessments", "Unstop Assessments"];
 
 const Assessment = () => {
   const [currentLinkIndex, setCurrentLinkIndex] = useState(0);
   return (
     <div className="assessment-container">
       <div className="assessment-topbar">
-        <span className="assessment-text">Assessment</span>
-        <Stroke />
-        <div className="assessment-links">
-          {AssessmentBar.map((eachItem, index) => {
-            const currentItem = index === currentLinkIndex;
-            return (
-              <div
-                key={`${eachItem}${index}`}
-                className={`assessment-link${currentItem ? "-current" : ""}`}
-                onClick={() => setCurrentLinkIndex(index)}
-              >
-                {eachItem}
-              </div>
-            );
-          })}
+        <div className="assessment-topbar-left">
+          <span className="assessment-text">Assessment</span>
+          <Stroke />
+          <div className="assessment-links">
+            {AssessmentBar.map((eachItem, index) => {
+              const currentItem = index === currentLinkIndex;
+              return (
+                <div
+                  key={`${eachItem}${index}`}
+                  className={`assessment-link${currentItem ? "-current" : ""}`}
+                  onClick={() => setCurrentLinkIndex(index)}
+                >
+                  {eachItem}
+                </div>
+              );
+            })}
+          </div>
         </div>
+        <div className="assessment-topbar-right"><MobileVersion /></div>
       </div>
       <div className="myassessments">
         {currentLinkIndex === 0 ? (

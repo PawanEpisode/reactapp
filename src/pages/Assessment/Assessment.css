@@ -3,12 +3,28 @@
     height: 70px;
     display: flex;
     padding: 20px 20px;
-    align-items: flex-start;
-    gap: 24px;
+    justify-content: space-between;
     border-radius: 12px 12px 0px 0px;
     border-bottom: 1px solid #DDE5EA;
     background: #FFF;
 }
+
+.assessment-topbar-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.assessment-topbar-right {
+    cursor: pointer;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
 .assessment-text {
     color: #1C4980;
     font-size: 20px;
