@@ -15,6 +15,7 @@ import { ReactComponent as World } from "../../assets/icons/world.svg";
 import TotalComponent from "../../components/TotalComponent/TotalComponent";
 import CandidateStatistics from "../../components/CandidateStatistics/CandidateStatistics";
 import NewAssessment from "../../components/NewAssessment/NewAssessment";
+import AssessmentCard from "../../components/AssessmentCard/AssessmentCard";
 const AssessmentBar = ["My Assessments", "Results"];
 
 const Assessment = () => {
@@ -110,10 +111,10 @@ const Assessment = () => {
             <div className="my-assessment-text">My Assessment</div>
             <div className="assessment-list">
               <NewAssessment />
-              <NewAssessment />
-              <NewAssessment />
-              <NewAssessment />
+              <AssessmentCard />
+              <AssessmentCard />
             </div>
+            <div className="empty-container"></div>
           </>
         ) : null}
       </div>

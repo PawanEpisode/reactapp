@@ -171,7 +171,7 @@ const CreateAssessment = () => {
         ) : null}
         <input
           id="skills-assessment"
-          className={"skillsAssessment skillradius" + (skillError ? " has-error" : "")}
+          className={"skillsAssessment" + (skillChips.length ? ' skillradius': '') + (skillError ? " has-error" : "")}
           type="text"
           value={skillValue}
           placeholder="Type Here"
