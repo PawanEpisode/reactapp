@@ -1,0 +1,128 @@
+.create-assessment-container {
+  display: flex;
+  padding: 20px 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  border: 1px solid #dadce0;
+  background: #fff;
+}
+
+.create-assessment-text {
+    color: #1C4980;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.chip-text {
+    color: var(--text-100, #1C4980);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.name-of-assessment,
+.purpose-test,
+.description-assessment,
+.skills-assessment,
+.duration-assessment,
+.skills-assessment {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.chipAndInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nameAssessment,
+.purposeAssessment,
+.descriptionAssessment,
+.durationAssessment,
+.skillsAssessment {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    padding: 15px;
+    align-items: center;
+
+    border-radius: 8px;
+    border: 1px solid #DADCE0;
+    background: #FFF;
+
+    color: #1C4980;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.skillsAssessment.skillradius {
+    border-radius: 0px 0px 8px 8px;
+}
+
+.nameAssessment:focus,
+.purposeAssessment:focus,
+.descriptionAssessment:focus,
+.durationAssessment:focus,
+.skillsAssessment:focus {
+    outline: none;
+}
+
+.skillsAssessment.has-error  {
+    border-color: #ff2625;
+}
+
+.skillerror {
+    margin: 0;
+    font-size: 90%;
+    color:#ff2625;
+}
+
+.selectIcon {
+    appearance:none;
+    -webkit-appearance:none; /* safari and chrome */
+    -moz-appearance:none; /* Mozilla */
+    -ms-appearance:none; /* Ie */
+
+    background-position: calc(100% - 12px) center !important;
+}
+
+.skill-assessment-chips {
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid var(--system-divider, #DDE5EA);
+}
+
+.skill-item-chip {
+    background-color: #DDEDFF;
+    display: flex;
+    font-size: 14px;
+    border-radius: 22px;
+    padding: 6px 8px 6px 10px;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-item-chip > .chipcrossbutton {
+    width: 18px;
+    height: 18px;
+    padding-top: 2px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DDEDFF;
+}

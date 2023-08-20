@@ -1,0 +1,34 @@
+.candidate-statistics-container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.candidate-statistics-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+}
+
+.candidate-statistics-container-value {
+    color: var(--text-100, #1C4980);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 140%; 
+}
+
+.candidate-statistics-container-subvalue {
+    color: var(--status-success, #05C165);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.candidate-statistics-container-text {
+    color: var(--text-100, #1C4980);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%; /* 19.6px */
+}

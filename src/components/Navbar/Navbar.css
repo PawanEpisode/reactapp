@@ -10,3 +10,20 @@
 a {
     text-decoration: none;
 }
+
+.admin-round-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-direction: column;
+}
+
+.adminroundstatus {
+    color: #d63500;
+    font-size: 10px;
+    padding: 6px 8px;
+    font-weight: 500;
+    border-radius: 22px;
+    border: 1px solid #D63500;
+    background: #FBEBEA;
+}
